@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import MainNavigation from "../../components/MainNavigation";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Card, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
@@ -32,7 +32,14 @@ export default function ViewBooking()
                 <Container>
                     <Row>
                         <Col>
-                            <p>You're booked in at: {booking.hotel.location}</p>
+                        <Card className="mt-4">
+                                <Card.Title className= "text-center fs-1" style={{paddingTop:"20px"}}><strong>View Your Booking</strong></Card.Title>
+                                <Card.Body style={{paddingTop:"0px"}}>                                    <img src={booking.hotel.img} style = {{width:"100%", paddingLeft:"20px", paddingRight:"20px", paddingBottom:"15px"}}/>
+                                    <div className="text-left" style={{paddingLeft:"20px"}}>
+                                        <Button className="justify-button: center display: flex"type="button" href='/' class="btn btn-primary" >Home</Button>{" "}
+                                    </div>
+                                </Card.Body>
+                            </Card>
                         </Col>
                     </Row>
                 </Container>

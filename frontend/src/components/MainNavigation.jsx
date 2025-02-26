@@ -32,13 +32,13 @@ export default function MainNavigation(){
         return(
             <Navbar className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="/">Hotels</Navbar.Brand>
-                    <Nav.Link href='/bookings'>View Bookings</Nav.Link>
-                    <Nav.Link href='/bookings/hotel'>View Bookings For A Hotel</Nav.Link>
+                    <Navbar.Brand className="fs-3" href="/"> <strong>Hotels</strong> </Navbar.Brand>
+                    <Nav.Link className="fs-3" href='/bookings' style={{paddingRight:"25px", paddingLeft:"20px"}}> <strong>View Bookings </strong></Nav.Link>
+                    <Nav.Link className="fs-3" href='/bookings/hotel'> <strong> View Bookings For A Hotel </strong></Nav.Link>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Text>
-                        Signed in as: <a href="#login">{me.email}</a>
+                    <Navbar.Text className="fs-3">
+                    <strong> Signed in as:</strong> <a href="#login"><strong>{me.email}</strong></a>
                     </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
